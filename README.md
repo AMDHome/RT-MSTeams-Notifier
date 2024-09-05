@@ -30,7 +30,7 @@ This is how to set it up for just new tickets.
    - Custom action commit code: Copy and paste the code from `scrip.pl` in this repo
 6. Customize the script
    - Change `$webhook_url` to the webhook URL you got in step 1
-   - Change `$rt_domain` to your RT's domain.
+   - Change `$rt_domain` to your RT's domain.  
      It should include everything before `/Ticket` when you open up a ticket in your instance.  
      IE. If the URL for a ticket is `https://example.com/rt/Ticket/Display.html?id=19287`  
      Then your `$rt_domain` is `https://example.com/rt`
