@@ -4,7 +4,7 @@ use JSON;
 
 my $ua = LWP::UserAgent->new;
 my $webhook_url = 'https://YOUR_WEBHOOK_URL';
-my $rt_domain = 'https://example.com'
+my $rt_domain = 'https://example.com/rt'
 
 # Get Information on the ticket
 my $ticket_id = $self->TicketObj->Id;
@@ -44,7 +44,7 @@ my $json_data = {
                     },
                     {
                         type => "TextBlock",
-                        text => "[**[$ticket_id]** $ticket_subject]($rt_domain/rt/Ticket/Display.html?id=$ticket_id)",
+                        text => "[**[$ticket_id]** $ticket_subject]($rt_domain/Ticket/Display.html?id=$ticket_id)",
                         size => "Large",
                         color => "Accent",
                         spacing => "Small",
@@ -64,7 +64,7 @@ my $json_data = {
                     {
                         type => "Action.OpenUrl",
                         title => "View in RT",
-                        url => "$rt_domain/rt/Ticket/Display.html?id=$ticket_id"
+                        url => "$rt_domain/Ticket/Display.html?id=$ticket_id"
                     },
                     {
                         type => "Action.ShowCard",
