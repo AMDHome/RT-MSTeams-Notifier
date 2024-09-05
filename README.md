@@ -16,7 +16,7 @@ This is how to set it up for just new tickets.
 
 1. Open up MS Teams in the web browser and create a webhook url in the channel you want to use.
    - [CLICK HERE for instructions on how to do that from Microsoft](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=newteams%2Cdotnet#create-an-incoming-webhook)
-   - As of writing this README, you can't seem create webhooks in the app. It must be done through the web version
+   - As of writing this README, you can't create webhooks in the app. It must be done through the web version
 3. Log into RT and go to **Admin** > **Scrips** > **Create**
 4. Fill out the basics
    - Description: Give the scrip a name
@@ -30,7 +30,8 @@ This is how to set it up for just new tickets.
    - Custom action commit code: Copy and paste the code from `scrip.pl` in this repo
 6. Customize the script
    - Change `$webhook_url` to the webhook URL you got in step 1
-   - Change `$rt_domain` to your RT's domain. It should include everything before `/Ticket` when you open up a ticket in your instance.  
+   - Change `$rt_domain` to your RT's domain.
+     It should include everything before `/Ticket` when you open up a ticket in your instance.  
      IE. If the URL for a ticket is `https://example.com/rt/Ticket/Display.html?id=19287`  
      Then your `$rt_domain` is `https://example.com/rt`
 
